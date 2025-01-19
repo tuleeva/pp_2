@@ -10,10 +10,10 @@ print(a)
 print(b)
 print(c)
 
-"""If you have a collection of values in a list, tuple etc.
-Python allows you to extract the values into variables.
-This is called unpacking.
-"""
+#If you have a collection of values in a list, tuple etc.
+#Python allows you to extract the values into variables.
+#This is called unpacking.
+
 fruits = ["apple", "banana", "cherry"]
 d, e, f = fruits
 print(d)
