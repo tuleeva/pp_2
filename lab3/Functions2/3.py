@@ -1,3 +1,4 @@
+#Write a function that takes a category name and returns just those movies under that category.
 movies = [
 {
 "name": "Usual Suspects", 
@@ -75,11 +76,17 @@ movies = [
 "category": "Romance"
 }
 ]
-def check(movies):
-    name = input()
+def movies_by_categories():
+    category_dict = {}
+    
     for movie in movies:
-        if movie["name"].lower()==name.lower():
-            return movie["imdb"] > 5.5
-
-print(check(movies))
-
+        if movie['category'] not in category_dict:
+            category_dict[movie['category']] = []
+        category_dict[movie['category']].append(movie['name'])
+    
+    for category, movie_list in category_dict.items():
+        print(f"Category: {category}")
+        for movie in movie_list:
+            print(f"  - {movie}")
+        print()
+movies_by_categories()

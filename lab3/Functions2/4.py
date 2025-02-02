@@ -1,3 +1,4 @@
+#Write a function that takes a list of movies and computes the average IMDB score.
 movies = [
 {
 "name": "Usual Suspects", 
@@ -75,11 +76,9 @@ movies = [
 "category": "Romance"
 }
 ]
-def check(movies):
-    name = input()
-    for movie in movies:
-        if movie["name"].lower()==name.lower():
-            return movie["imdb"] > 5.5
-
-print(check(movies))
-
+def average_imdb(movies):
+    total_sum = sum(movie['imdb'] for movie in movies)
+    num = len(movies)
+    return total_sum/num
+result=average_imdb(movies)
+print(result)
