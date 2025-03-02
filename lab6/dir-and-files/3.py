@@ -15,7 +15,7 @@ def Check(path):
 
 def main():
     path = input("Enter the path: ")
-
+    #input example: C:\Users\User\Desktop\pp_2\labs\lab6\dir-and-files\for_examples\text.txt
     Check(path)
 
 if __name__ == "__main__":
